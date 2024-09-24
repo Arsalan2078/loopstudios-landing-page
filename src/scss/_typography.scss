@@ -1,0 +1,22 @@
+// TYPOGRAPHY
+
+// import the required font families from google
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+// map of font stacks - chosen fonts paired with sans-serif
+$font-stacks: (
+  alata: ("Alata", sans-serif),
+  josefin: ("Josefin", sans-serif)
+);
+
+// map of font sizes
+$font-sizes: (
+  rg: 0.9375rem
+);
+
+// map of font weights
+$font-weights: (
+  300: 300,
+  400: 400
+);

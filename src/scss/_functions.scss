@@ -1,0 +1,30 @@
+@use "colors";
+@use "typography";
+
+@each $name, $color in colors.$primary {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .text-#{$name} {
+    background-color: $color;
+  }
+}
+
+// colors functions
+@function get-color($color) {
+  @return map-get(colors.$primary, $color);
+}
+
+// typography functions
+@function get-font-stack($stack) {
+  @return map-get(typography.$font-stacks, $stack);
+}
+
+@function get-font-size($size) {
+  @return map-get(typography.$font-sizes, $size);
+}
+
+@function get-font-weight($weight) {
+  @return map-get(typography.$font-weights, $weight);
+}
