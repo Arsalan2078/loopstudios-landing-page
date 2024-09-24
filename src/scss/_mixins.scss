@@ -1,0 +1,10 @@
+@mixin set-colors ($background, $text) {
+  background-color: get-color($background);
+  color: get-color($text);
+}
+
+@mixin set-font-props ($stack, $size, $weight) {
+  font-family: get-font-stack($stack);
+  font-size: get-font-size($size);
+  font-weight: get-font-weight($weight);
+}
