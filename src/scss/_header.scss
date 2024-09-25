@@ -1,0 +1,34 @@
+
+.nav-links-mobile {
+    padding: 1rem;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0%;
+    top: 0%;
+
+    @include set-colors(clr-black, clr-white);
+}
+
+.nav-links-desktop {
+  display: none;
+}
+
+@media (min-width: 47.5rem) {
+  .nav-links-mobile.show {
+    display: none;
+  }
+
+  .nav-links-desktop {
+    padding: 0;
+    display: block;
+    position: inherit;
+    height: auto;
+    background-color: transparent;
+  }
+
+  .nav-toggler {
+    display: none;
+  }
+}

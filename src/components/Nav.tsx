@@ -19,24 +19,57 @@ function Nav () {
       <NavToggler 
         onClick={handleShowNav} 
       />
+      
+      <div className={`nav-links-desktop`}>
+        <ul>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Carrers</a>
+          </li>
+          <li>
+            <a href="#">Events</a>
+          </li>
+          <li>
+            <a href="#">Products</a>
+          </li>
+          <li>
+            <a href="#">Support</a>
+          </li>          
+        </ul>
+      </div>
 
-      <ul className={`nav-links ${showNav ? "show" : ""}`}>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Carrers</a>
-        </li>
-        <li>
-          <a href="#">Events</a>
-        </li>
-        <li>
-          <a href="#">Products</a>
-        </li>
-        <li>
-          <a href="#">Support</a>
-        </li>
-      </ul>
+      <div className={`nav-links-mobile ${showNav ? "show" : ""}`}>
+        <div className={`${showNav ? "" : "hide"}`}>
+          <Logo
+            src={`src/assets/images/logo.svg`}
+            alt={`logo`}
+          />
+
+          <NavToggler 
+            onClick={handleShowNav} 
+          />
+        </div>
+
+        <ul>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Carrers</a>
+          </li>
+          <li>
+            <a href="#">Events</a>
+          </li>
+          <li>
+            <a href="#">Products</a>
+          </li>
+          <li>
+            <a href="#">Support</a>
+          </li>          
+        </ul>
+      </div>
     </nav>
   );
 }
