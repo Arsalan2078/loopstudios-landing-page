@@ -1,14 +1,22 @@
+.header {
+  background-image: url("src/assets/images/mobile/image-hero.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: get-color(clr-white);
+}
 
 .nav-links-mobile {
-    padding: 1rem;
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    left: 0%;
-    top: 0%;
+  padding: 1rem;
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0%;
+  top: 0%;
 
-    @include set-colors(clr-black, clr-white);
+  @include set-colors(clr-black, clr-white);
 }
 
 .nav-links-desktop {
@@ -16,6 +24,11 @@
 }
 
 @media (min-width: 47.5rem) {
+  .header {
+    background-image: url("src/assets/images/desktop/image-hero.jpg");
+  }
+
+  // prevent both nav menus from being visible simultaneously on larger screens
   .nav-links-mobile.show {
     display: none;
   }

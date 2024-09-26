@@ -122,7 +122,26 @@ meter {
 }
 
 html, body {
+  height: 100%;
   overflow-x: hidden;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font-family: "Alata", sans-serif;
+  font-size: 2.8125rem;
+  font-weight: 100;
+}
+
+.header {
+  background-image: url("src/assets/images/mobile/image-hero.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: hsl(0, 0%, 100%);
 }
 
 .nav-links-mobile {
@@ -142,6 +161,9 @@ html, body {
 }
 
 @media (min-width: 47.5rem) {
+  .header {
+    background-image: url("src/assets/images/desktop/image-hero.jpg");
+  }
   .nav-links-mobile.show {
     display: none;
   }
@@ -159,8 +181,7 @@ html, body {
 .container {
   margin: 0 auto;
   padding: 1rem;
-  width: min(100%, 47.6rem);
-  background-color: turquoise;
+  width: min(100%, 47.5rem);
 }
 
 .show {

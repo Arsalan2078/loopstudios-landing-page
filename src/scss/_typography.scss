@@ -12,11 +12,14 @@ $font-stacks: (
 
 // map of font sizes
 $font-sizes: (
-  rg: 0.9375rem
+  rg: 0.9375rem,
+  lg: 2.8125rem
 );
 
 // map of font weights
 $font-weights: (
+  100: 100,
+  200: 200,
   300: 300,
   400: 400
 );

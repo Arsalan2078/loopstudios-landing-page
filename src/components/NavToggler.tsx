@@ -1,9 +1,16 @@
 import { OnClickProps } from "../libs/types";
+import Icon from "./Icon";
 
-function NavToggler ({onClick}: OnClickProps) {
+interface ShowNavProp {
+  showNav: boolean
+}
+
+function NavToggler ({onClick, showNav}: OnClickProps & ShowNavProp) {
   return (
     <button className="nav-toggler" onClick={onClick}>
-      Nav Toggler
+      {
+        showNav ? <Icon icon={`close`} /> : <Icon icon={`hamburger`} />
+      }
     </button>
   );
 }

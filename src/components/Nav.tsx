@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavToggler from "./NavToggler";
 import Logo from "./Logo";
+import NavLinks from "./NavLinks";
 
 function Nav () {
   const [showNav, setShowNav] = useState<boolean>(false);
@@ -10,65 +11,38 @@ function Nav () {
   }
 
   return (
-    <nav className="nav">
-      <Logo
-        src={`src/assets/images/logo.svg`}
-        alt={`logo`}
-      />
+    <nav className="p-4">
+      <div className="is-flex is-justify-content-space-between is-align-items-center">
+        <Logo 
+          src={`src/assets/images/logo.svg`}
+          alt={`logo`}
+        />
 
-      <NavToggler 
-        onClick={handleShowNav} 
-      />
-      
-      <div className={`nav-links-desktop`}>
-        <ul>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Carrers</a>
-          </li>
-          <li>
-            <a href="#">Events</a>
-          </li>
-          <li>
-            <a href="#">Products</a>
-          </li>
-          <li>
-            <a href="#">Support</a>
-          </li>          
-        </ul>
+        <NavToggler
+          onClick={handleShowNav}
+          showNav={showNav}
+        />
+
+        <div className="nav-links-desktop">
+          <NavLinks className={`is-flex is-gap-3`}/>      
+        </div>        
       </div>
 
+
       <div className={`nav-links-mobile ${showNav ? "show" : ""}`}>
-        <div className={`${showNav ? "" : "hide"}`}>
+        <div className={`${showNav ? "" : "hide"} is-flex is-justify-content-space-between is-align-items-center p-4`}>
           <Logo
             src={`src/assets/images/logo.svg`}
             alt={`logo`}
           />
 
-          <NavToggler 
-            onClick={handleShowNav} 
+          <NavToggler
+            onClick={handleShowNav}
+            showNav={showNav}
           />
         </div>
 
-        <ul>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Carrers</a>
-          </li>
-          <li>
-            <a href="#">Events</a>
-          </li>
-          <li>
-            <a href="#">Products</a>
-          </li>
-          <li>
-            <a href="#">Support</a>
-          </li>          
-        </ul>
+        <NavLinks className={`is-flex is-flex-direction-column is-gap-2 `}/>
       </div>
     </nav>
   );
