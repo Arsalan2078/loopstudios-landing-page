@@ -1,11 +1,9 @@
+import NavLinks from "./components/NavLinks";
+
 export default function Home() {
   return (
     <div>
-      About
-      Careers
-      Events
-      Products
-      Support
+      <NavLinks/>
 
       Immersive experiences that deliver
 
@@ -29,11 +27,7 @@ export default function Home() {
       The curiosity
       Make it fisheye
 
-      About
-      Careers
-      Events
-      Products
-      Support
+      <NavLinks/>
 
       © 2021 Loopstudios. All rights reserved.      
     </div>
