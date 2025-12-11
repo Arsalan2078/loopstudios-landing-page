@@ -1,4 +1,5 @@
 import NavLinks from "./components/NavLinks";
+import creations from "./data/creations.json";
 
 export default function Home() {
   return (
@@ -18,14 +19,14 @@ export default function Home() {
 
       See all
 
-      Deep earth
-      Night arcade
-      Soccer team VR
-      The grid
-      From up above VR
-      Pocket borealis
-      The curiosity
-      Make it fisheye
+      {creations.map(({title, image}) => <div key={title}>
+        <div>{title}</div>
+        
+        <picture>
+          <source srcSet={image.desktop} media="(min-width: calc(1440 / 16 * 1rem))" />
+          <img src={image.mobile} alt={title} />
+        </picture>
+      </div>)}
 
       <NavLinks/>
 
