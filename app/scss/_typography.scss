@@ -1,0 +1,19 @@
+@layer {
+  h1 {
+    font-family: var(--ff-josefin-sans);
+    font-size: var(--fs-40-72);
+    line-height: var(--lh-100);
+  }
+
+  h2 {
+    font-family: var(--ff-josefin-sans);
+    font-size: var(--fs-32-48);
+    line-height: var(--lh-100);
+  }
+
+  body {
+    font-family: var(--ff-alata);
+    font-size: var(--fs-15);
+    line-height: var(--lh-165);
+  }
+}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Alata, Josefin_Sans } from "next/font/google";
-import "./globals.css";
+import "./scss/globals.scss";
 
 const alata = Alata({
   variable: "--ff-alata",

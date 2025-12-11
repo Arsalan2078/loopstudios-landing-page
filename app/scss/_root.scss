@@ -1,0 +1,32 @@
+:root {
+  // colors
+  --clr-white: rgb(255 255 255);
+  --clr-black: rgb(0 0 0);
+  --clr-grey-200: rgb(216 216 216);
+
+  --clr-blue-100: rgb(229 234 241);
+  --clr-blue-50: rgb(246 250 255);
+
+  --grd-1: linear-gradient(
+    to top,
+    rgba(from var(--clr-black) r g b / 0.6),
+    rgba(from var(--clr-black) r g b / 0)
+  );
+
+  // type
+  --fs-40-72: clamp(2.5rem, 0.5916rem + 8.1425vw, 4.5rem);
+  --fs-32-48: clamp(2rem, 1.0458rem + 4.0712vw, 3rem);
+  --fs-32: 2rem;
+  --fs-24: 1.5rem;
+  --fs-15: 0.9375rem;
+  --fs-14: 0.875rem;
+
+  --lh-100: 1;
+  --lh-165: 1.65;
+
+  --ls-5: calc(5 / 16 * 1rem);
+
+  // root styles
+  background-color: var(--clr-white);
+  color: var(--clr-black)
+}
