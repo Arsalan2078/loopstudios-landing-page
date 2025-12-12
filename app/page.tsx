@@ -1,11 +1,13 @@
+import css from "./page.module.scss";
 import Link from "next/link";
 import NavLinks from "./components/NavLinks";
 import creations from "./data/creations.json";
 import Logo from "./components/Logo";
+import SocMeds from "./components/SocMeds";
 
 export default function Home() {
   return (
-    <div>
+    <div className={css.page}>
       <header>
         <nav>
           <Logo />
@@ -66,8 +68,12 @@ export default function Home() {
           <NavLinks />
         </nav>
 
-        <div className="opacity-50">
-          © 2021 Loopstudios. All rights reserved.
+        <div>
+          <SocMeds />
+
+          <div className="opacity-50">
+            © 2021 Loopstudios. All rights reserved.
+          </div>
         </div>
       </footer>
     </div>
