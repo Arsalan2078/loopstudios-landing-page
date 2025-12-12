@@ -1,36 +1,75 @@
+import Link from "next/link";
 import NavLinks from "./components/NavLinks";
 import creations from "./data/creations.json";
+import Logo from "./components/Logo";
 
 export default function Home() {
   return (
     <div>
-      <NavLinks/>
+      <header>
+        <nav>
+          <Logo />
+          <NavLinks />
+        </nav>
 
-      Immersive experiences that deliver
+        <h1>Immersive experiences that deliver</h1>
+      </header>
 
-      The leader in interactive VR
+      <main>
+        <section>
+          <picture>
+            <source
+              srcSet="/images/desktop/image-interactive.jpg"
+              media="(min-width: calc(1440 / 16 * 1rem))"
+            />
+            <img src="/images/mobile/image-interactive.jpg" alt="" />
+          </picture>
 
-      Founded in 2011, Loopstudios has been producing world-class virtual reality 
-      projects for some of the best companies around the globe. Our award-winning 
-      creations have transformed businesses through digital experiences that bind 
-      to their brand.
+          <div>
+            <h2>The leader in interactive VR</h2>
 
-      Our creations
+            <p className="opacity-50">
+              Founded in 2011, Loopstudios has been producing world-class
+              virtual reality projects for some of the best companies around the
+              globe. Our award-winning creations have transformed businesses
+              through digital experiences that bind to their brand.
+            </p>
+          </div>
+        </section>
 
-      See all
+        <section>
+          <h2>Our creations</h2>
 
-      {creations.map(({title, image}) => <div key={title}>
-        <div>{title}</div>
-        
-        <picture>
-          <source srcSet={image.desktop} media="(min-width: calc(1440 / 16 * 1rem))" />
-          <img src={image.mobile} alt={title} />
-        </picture>
-      </div>)}
+          <ul>
+            {creations.map(({ title, image }) => (
+              <li key={title}>
+                <div>{title}</div>
 
-      <NavLinks/>
+                <picture>
+                  <source
+                    srcSet={image.desktop}
+                    media="(min-width: calc(1440 / 16 * 1rem))"
+                  />
+                  <img src={image.mobile} alt={title} />
+                </picture>
+              </li>
+            ))}
+          </ul>
 
-      © 2021 Loopstudios. All rights reserved.      
+          <Link href="/">See all</Link>
+        </section>
+      </main>
+
+      <footer>
+        <nav>
+          <Logo />
+          <NavLinks />
+        </nav>
+
+        <div className="opacity-50">
+          © 2021 Loopstudios. All rights reserved.
+        </div>
+      </footer>
     </div>
-  )
+  );
 }
